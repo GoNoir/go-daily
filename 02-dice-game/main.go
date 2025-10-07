@@ -19,7 +19,7 @@ import (
 //create dice, for now - slice (struct or enums could be better - why?)
 
 //roll dice - pseudorandomness from rand library. Good enough for this, but not secure enough for security purpose.
-//ask user for the next one
+//ask user for the next one - need another library - bufio?
 
 //roll dice again
 //print won/lose
@@ -36,5 +36,12 @@ dice := []int{1, 2, 3, 4, 5, 6}
 //roll - we need to extrapolate roll later for DRY - needs to be checked agains the predition, like lastRoll := DiceRoll(dice)
 fmt.Println(dice[rand.Intn(len(dice))])
 //Ask user to give higher or lower prediction eg. h or l 
-fmt.Println("
+
+//Loop 4 more times
+//for i := 1; i < 5; i++ {
+//roll dice again
+//update score and print for user
+
+
+//print final score
 }
