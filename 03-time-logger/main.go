@@ -9,23 +9,38 @@ Stop task
 Show how long it took
 
 Strategy:
-Using struct to create a custom Task type struct which will group time related data
+Create a custom Task type struct which will group time related data
 Hypothesis - using methods with a pointer receiver to change instance data(not just a copy as in case of value receiver method)
-
 */
 
 package main
 
 import (
-	"time"
+	//	"time"
+	"fmt"
 )
-
+/*
 type Task struct {
 	Name  string
 	Start time.Time
 	End   time.Time
 }
 
-//tasks to use: functions which require log(n^2) and log(2^n)
+func (t *Task) calcDuration(x, y time.Time ) time.Time {
+	return y - x
+}
+*/
+
+func factorial(x int) int {
+	sum := 1
+	for i := 2; i < x+1; i++ {
+		sum *= i 
+	}
+	return sum
+}
+
+func main() {
+	fmt.Println(factorial(5))
+}
 
 //methods MIGHT be redundant after all - TBC
