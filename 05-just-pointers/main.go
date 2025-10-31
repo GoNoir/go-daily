@@ -5,25 +5,23 @@ package main
 
 import "fmt"
 
-func swapValues(p1, p2 *int) {
-	value1 := *p1
-	value2 := *p2
-	fmt.Println(value1, value2)
+//takes two pointers
+func swapValues(a, b *int) {
 
-	*p1 = value2
-	*p2 = value1
+	*a, *b = *b, *a//idiomatic swap of dereferenced values 	
 
-	fmt.Println(p1, p2)
-	fmt.Println(*p1, *p2)
 }
 
 func main() {
 	x := 5
 	y := 10
-	xpnt := &x
-	ypnt := &y
 
-swapValues(xpnt, ypnt)
+	fmt.Println("Before swap:", x, y)
+
+	//swapping
+	swapValues(&x, &y)
+
+	fmt.Println("After swap:", x, y)
 
 }
 
