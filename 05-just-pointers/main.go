@@ -7,8 +7,8 @@ import "fmt"
 
 //takes two pointers
 func swapValues(a, b *int) {
-
-	*a, *b = *b, *a//idiomatic swap of dereferenced values 	
+ 
+	*a, *b = *b, *a//idiomatic go swap
 
 }
 

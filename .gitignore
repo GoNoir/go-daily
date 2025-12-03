@@ -7,6 +7,9 @@
 *.dll
 *.so
 *.dylib
+main
+01-word-counter/main
+02-dice-game/main
 
 # Test binary, built with `go test -c`
 *.test
@@ -24,9 +27,17 @@ profile.cov
 go.work
 go.work.sum
 
+# Go build cache
+*.out
+
 # env file
 .env
 
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Vim swap files
+*.swp
+*.swo
+*~
